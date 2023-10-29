@@ -3,24 +3,23 @@ import { getCurrentTimeInCDMX, formatTimeForCDMX } from "../lib/helpers";
 import Card from "./Card/index.astro";
 ---
 
-<script>
-  import { formatTimeForCDMX } from "../lib/helpers";
-
-  function updateClock() {
-    const timeDisplay = document.getElementById("timeDisplay");
-    if (timeDisplay) {
-      timeDisplay.textContent = formatTimeForCDMX(new Date());
-    }
-  }
-
-  setInterval(updateClock, 1000);
-</script>
-
-<Card colSpan="lg:col-span-2" rowSpan="md:row-span-1" title="CDMX">
-  <h4
-    id="timeDisplay"
-    class="text-5xl w-full h-[calc(100%-28px)] font-serif flex justify-center items-center"
-  >
-    {formatTimeForCDMX(getCurrentTimeInCDMX())}
-  </h4>
+<Card colSpan="lg:col-span-2" rowSpan="md:row-span-1" title="Portafolio">
+  <div class="flex">
+    <div>
+    <button class="p-2 bg-opacity-15 hover:bg-opacity-35 bg-white text-white mt-2 rounded-lg shadow-2xl border border-white border-opacity-18 backdrop-blur-md">
+      <a href="#">Proyectos Recientes</a>
+    </button>
+      </div>
+  </div>
 </Card>
+
+
+<style>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>

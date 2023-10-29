@@ -46,6 +46,7 @@ const { title, description } = Astro.props;
     font-style: normal;
     font-display: swap;
     font-weight: 100 1000;
+    text-wrap: balance;
   }
   @font-face {
     font-family: "Satoshi";
@@ -54,11 +55,14 @@ const { title, description } = Astro.props;
     font-style: normal;
     font-display: swap;
     font-weight: 100 1000;
+    
   }
 
   body {
     margin: 0;
     font-family: "Satoshi", sans-serif;
+    text-wrap: balance;
+
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
